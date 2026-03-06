@@ -1,3 +1,4 @@
+
 # vue-ecommerce-spa
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -40,3 +41,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+# myvueproject
+e-commerce store development-5902
+adbf9081f562ed73d605f53b5d89621ec0d90083
