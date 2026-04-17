@@ -17,39 +17,44 @@ const auth = useAuthStore()
 </RouterLink>
 
       <nav class="flex items-center gap-4">
-        <RouterLink to="/" class="hover:underline">Home</RouterLink>
+  <RouterLink to="/" class="text-white hover:underline">Home</RouterLink>
 
-        <RouterLink to="/cart" class="relative hover:underline">
-          Cart
-          <span
-            v-if="cart.totalItems > 0"
-            class="ml-2 inline-flex items-center justify-center text-xs font-bold px-2 py-1 rounded-full bg-black text-white"
-          >
-            {{ cart.totalItems }}
-          </span>
-        </RouterLink>
+  <RouterLink to="/cart" class="text-white hover:underline">
+    Cart
+    <span
+      v-if="cart.totalItems > 0"
+      class="ml-2 inline-flex items-center justify-center text-xs font-bold px-2 py-1 rounded-full bg-white text-black"
+    >
+      {{ cart.totalItems }}
+    </span>
+  </RouterLink>
 
-        <!-- ✅ Auth: Login / Logout -->
-        <RouterLink v-if="!auth.isLoggedIn" to="/login" class="hover:underline">
-          Login
-        </RouterLink>
+  <RouterLink v-if="!auth.isLoggedIn" to="/login" class="text-white hover:underline">
+    Login
+  </RouterLink>
 
-        <button
-          v-else
-          class="px-3 py-1 rounded border hover:bg-gray-100 dark:hover:bg-gray-800"
-          @click="auth.logout()"
-        >
-          Logout
-        </button>
+  <button
+    v-else
+    class="px-3 py-1 rounded border border-white text-white hover:bg-white hover:text-purple-600"
+    @click="auth.logout()"
+  >
+    Logout
+  </button>
 
-        <!-- 🌙 Dark Mode Toggle -->
-        <button
-          class="px-3 py-1 rounded border hover:bg-gray-100 dark:hover:bg-gray-800"
-          @click="toggle"
-        >
-          {{ theme === 'dark' ? 'Light' : 'Dark' }}
-        </button>
-      </nav>
+  <button
+    @click="toggle"
+    class="relative w-16 h-8 rounded-full border border-white/70 transition-colors duration-300"
+    :class="theme === 'dark' ? 'bg-gray-900' : 'bg-white/20'"
+    aria-label="Toggle theme"
+  >
+    <span
+      class="absolute top-1 left-1 w-6 h-6 rounded-full flex items-center justify-center text-xs transition-transform duration-300 bg-white text-black"
+      :class="theme === 'dark' ? 'translate-x-8' : 'translate-x-0'"
+    >
+      {{ theme === 'dark' ? '🌙' : '☀️' }}
+    </span>
+  </button>
+</nav>
     </div>
   </header>
 </template>
