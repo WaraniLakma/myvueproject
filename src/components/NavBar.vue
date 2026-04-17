@@ -10,9 +10,11 @@ const auth = useAuthStore()
 </script>
 
 <template>
-  <header class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+  <header class="text-white" style="background-color: #9D00FF;">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <RouterLink to="/" class="text-lg font-bold">Vue Store</RouterLink>
+      <RouterLink to="/" class="flex items-center">
+  <img src="/logo.png" alt="WLSMart" class="h-14 w-48" />
+</RouterLink>
 
       <nav class="flex items-center gap-4">
         <RouterLink to="/" class="hover:underline">Home</RouterLink>

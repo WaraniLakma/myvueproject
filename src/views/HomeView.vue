@@ -12,7 +12,7 @@ onMounted(fetchProducts)
 <template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto p-4">
-      <h1 class="text-2xl font-bold mb-4">E-Commerce Store</h1>
+      <h1 class="text-2xl font-bold mb-4">Explore Our Products</h1>
 
       <div class="flex flex-col sm:flex-row gap-3 mb-6">
         <input
